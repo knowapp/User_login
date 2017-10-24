@@ -1,0 +1,301 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Last login: Fri Oct 20 09:14:41 on ttys000\
+Mel-MBP17-2:~ mel-mbp17$ cd Desktop/DojoAssignments/Python/myEnvironments/django_users/\
+Mel-MBP17-2:django_users mel-mbp17$ cd ..\
+Mel-MBP17-2:myEnvironments mel-mbp17$ python manage.py runserver\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+Mel-MBP17-2:myEnvironments mel-mbp17$ ls\
+02. time_main		05. SessionMain		MultipleAppMain		d_project		flaskEnv\
+03. word_generator	06. AmadonMain		Python - wall		djangoEnv		key\
+04. SurveyMain		MI3			bandsTogether		django_users\
+Mel-MBP17-2:myEnvironments mel-mbp17$ source djangoEnv/bin/activate\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ cd django_users/\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py runserer\
+Unknown command: 'runserer'\
+Type 'manage.py help' for usage.\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\
+Run 'python manage.py migrate' to apply them.\
+\
+October 24, 2017 - 02:44:07\
+Django version 1.11.6, using settings 'django_users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^C(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py makemigrations\
+No changes detected\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, contenttypes, sessions\
+Running migrations:\
+  Applying contenttypes.0001_initial... OK\
+  Applying auth.0001_initial... OK\
+  Applying admin.0001_initial... OK\
+  Applying admin.0002_logentry_remove_auto_add... OK\
+  Applying contenttypes.0002_remove_content_type_name... OK\
+  Applying auth.0002_alter_permission_name_max_length... OK\
+  Applying auth.0003_alter_user_email_max_length... OK\
+  Applying auth.0004_alter_user_username_opts... OK\
+  Applying auth.0005_alter_user_last_login_null... OK\
+  Applying auth.0006_require_contenttypes_0002... OK\
+  Applying auth.0007_alter_validators_add_error_messages... OK\
+  Applying auth.0008_alter_user_username_max_length... OK\
+  Applying sessions.0001_initial... OK\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py shell\
+Python 2.7.14 (default, Sep 25 2017, 09:53:22) \
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.djangousersapp.models import *\
+>>> \
+KeyboardInterrupt\
+>>> \
+KeyboardInterrupt\
+>>> \
+[1]+  Stopped                 python manage.py shell\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ ls\
+apps		db.sqlite3	django_users	manage.py\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ cd apps\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ ls\
+__init__.py	__init__.pyc	djangousersapp\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ cd djangousersapp/\
+(djangoEnv) Mel-MBP17-2:djangousersapp mel-mbp17$ ls\
+__init__.py	admin.py	apps.py		models.py	tests.py	urls.py		views.py\
+__init__.pyc	admin.pyc	migrations	models.pyc	url.sy		urls.pyc\
+(djangoEnv) Mel-MBP17-2:djangousersapp mel-mbp17$ vim models.py\
+(djangoEnv) Mel-MBP17-2:djangousersapp mel-mbp17$ vim models.py\
+(djangoEnv) Mel-MBP17-2:djangousersapp mel-mbp17$ python manage.py shell\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+(djangoEnv) Mel-MBP17-2:djangousersapp mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ ls\
+apps		db.sqlite3	django_users	manage.py\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ python manage.py shell\
+Python 2.7.14 (default, Sep 25 2017, 09:53:22) \
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.djangouserapp.models import *\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ImportError: No module named djangouserapp.models\
+>>> from apps.djangousersapp.models import *\
+>>> Users.objects.create(id="", first_name="Melvin", last_name="Patterson", email_address="Mel@mac.com", age="30", id="", id="")\
+  File "<console>", line 1\
+SyntaxError: keyword argument repeated\
+>>> Users.objects.create(id="", first_name="Melvin", last_name="Patterson", email_address="Mel@mac.com", age="30", created_at="", updated_at="")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'Users' is not defined\
+>>> Users.objects.create(first_name="", last_name="", email_address="", age="")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'Users' is not defined\
+>>> \
+[2]+  Stopped                 python manage.py shell\
+(djangoEnv) Mel-MBP17-2:django_users mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ django-admin startproject user_login\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ django-admin startproject project\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ cd project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ mkdir apps\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd apps\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ touch __init__.py\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ python ../manage.py startapp user_login\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ ls\
+__init__.py	settings.py	urls.py\
+__init__.pyc	settings.pyc	wsgi.py\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ vim settings.py\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py runserver\
+Unhandled exception in thread started by <function wrapper at 0x10362ee60>\
+Traceback (most recent call last):\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate\
+    app_config = AppConfig.create(entry)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/config.py", line 120, in create\
+    mod = import_module(mod_path)\
+  File "/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module\
+    __import__(name)\
+ImportError: No module named user_logindjango.contrib\
+^C(djangoEnv) Mel-MBP17-2:project mel-mbp17$ ls\
+apps		manage.py	project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:.Trash mel-mbp17$ cd ~\
+(djangoEnv) Mel-MBP17-2:~ mel-mbp17$ cd Desktop/\
+(djangoEnv) Mel-MBP17-2:Desktop mel-mbp17$ cd DojoAssignments/Python/myEnvironments/\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ django-admin startproject project\
+(djangoEnv) Mel-MBP17-2:myEnvironments mel-mbp17$ cd project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ mkdir apps\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd apps\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ touch __init__.py\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ python ../manage.py startapp user_login\
+(djangoEnv) Mel-MBP17-2:apps mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ l\
+-bash: l: command not found\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ ls\
+apps		manage.py	project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd project\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ vim settings.py\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ vim settings.py\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ cd ..\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py runserver\
+Unhandled exception in thread started by <function wrapper at 0x10c888e60>\
+Traceback (most recent call last):\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate\
+    app_config = AppConfig.create(entry)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/config.py", line 120, in create\
+    mod = import_module(mod_path)\
+  File "/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module\
+    __import__(name)\
+ImportError: No module named user_logindjango.contrib\
+^C(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/core/management/__init__.py", line 364, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/core/management/__init__.py", line 338, in execute\
+    django.setup()\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/registry.py", line 85, in populate\
+    app_config = AppConfig.create(entry)\
+  File "/Users/mel-mbp17/Desktop/DojoAssignments/Python/myEnvironments/djangoEnv/lib/python2.7/site-packages/django/apps/config.py", line 120, in create\
+    mod = import_module(mod_path)\
+  File "/usr/local/Cellar/python/2.7.14/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module\
+    __import__(name)\
+ImportError: No module named user_logindjango.contrib\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py makemigrations\
+Migrations for 'user_login':\
+  apps/user_login/migrations/0001_initial.py\
+    - Create model User\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, contenttypes, sessions, user_login\
+Running migrations:\
+  Applying contenttypes.0001_initial... OK\
+  Applying auth.0001_initial... OK\
+  Applying admin.0001_initial... OK\
+  Applying admin.0002_logentry_remove_auto_add... OK\
+  Applying contenttypes.0002_remove_content_type_name... OK\
+  Applying auth.0002_alter_permission_name_max_length... OK\
+  Applying auth.0003_alter_user_email_max_length... OK\
+  Applying auth.0004_alter_user_username_opts... OK\
+  Applying auth.0005_alter_user_last_login_null... OK\
+  Applying auth.0006_require_contenttypes_0002... OK\
+  Applying auth.0007_alter_validators_add_error_messages... OK\
+  Applying auth.0008_alter_user_username_max_length... OK\
+  Applying sessions.0001_initial... OK\
+  Applying user_login.0001_initial... OK\
+(djangoEnv) Mel-MBP17-2:project mel-mbp17$ python manage.py shell\
+Python 2.7.14 (default, Sep 25 2017, 09:53:22) \
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.37)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.user_login.models import *\
+>>> User.objects.create(first_name="Melvin", last_name="Patterson", email_address="mel@mac.com", age="30")\
+object: Melvin, Patterson, mel@mac.com, 30\
+>>> User.objects.create(first_name="Tom")\
+object: Tom, , , \
+>>> b = User(first_name="Mel", last_name="Pat", email_address="pat@mac.com", age="29")\
+>>> \
+>>> b.save()\
+>>> b.name="Mel"\
+>>> b.first_name="Mel"\
+>>> b.last_name="Pat"\
+>>> b.save()\
+>>> User.objects.first()\
+object: Melvin, Patterson, mel@mac.com, 30\
+>>> User.objects.last()\
+object: Mel, Pat, pat@mac.com, 29\
+>>> User.objects.count()\
+3\
+>>> User.objects.all()\
+<QuerySet [object: Melvin, Patterson, mel@mac.com, 30, object: Tom, , , , object: Mel, Pat, pat@mac.com, 29]>\
+>>> b = User(first_name="Test", last_name="Test2")\
+>>> b.first_name="Test!"\
+>>> b.last_name="Test2!"\
+>>> b.save()\
+>>> User.objects.count()\
+4\
+>>> user.objects.last()\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'user' is not defined\
+>>> User.objects.last()\
+object: Test!, Test2!, , \
+>>> b=User.objects.first()\
+>>> b.first_name="Melt"\
+>>> b.save()\
+>>> User.objects.first()\
+object: Melt, Patterson, mel@mac.com, 30\
+>>> b=User.obects.third()\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: type object 'User' has no attribute 'obects'\
+>>> b=User.obects.3()\
+  File "<console>", line 1\
+    b=User.obects.3()\
+                  ^\
+SyntaxError: invalid syntax\
+>>> b=User.obects.get(id=3)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: type object 'User' has no attribute 'obects'\
+>>> b = User.obects.get(id=3)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: type object 'User' has no attribute 'obects'\
+>>> b = User.objects.get(id=3)\
+>>> b.last_name="Patterson"\
+>>> b.save()\
+>>> User.objects.all()\
+<QuerySet [object: Melt, Patterson, mel@mac.com, 30, object: Tom, , , , object: Mel, Patterson, pat@mac.com, 29, object: Test!, Test2!, , ]>\
+>>> b = User.objects.get(id=2)\
+>>> b.last_name="Patterson"\
+>>> b.save()\
+>>> User.objects.all()\
+<QuerySet [object: Melt, Patterson, mel@mac.com, 30, object: Tom, Patterson, , , object: Mel, Patterson, pat@mac.com, 29, object: Test!, Test2!, , ]>\
+>>> b = User.objects.get(id=2)\
+>>> b.delete()\
+(1, \{u'user_login.User': 1\})\
+>>> User.objects.all()\
+<QuerySet [object: Melt, Patterson, mel@mac.com, 30, object: Mel, Patterson, pat@mac.com, 29, object: Test!, Test2!, , ]>\
+>>> User.objects.order_by("first_name")\
+<QuerySet [object: Mel, Patterson, pat@mac.com, 29, object: Melt, Patterson, mel@mac.com, 30, object: Test!, Test2!, , ]>\
+>>> User.object.raw("SELECT * FROM user_login_first_name")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: type object 'User' has no attribute 'object'\
+>>> User.object.raw("SELECT * FROM user_login_first_name")\
+}
